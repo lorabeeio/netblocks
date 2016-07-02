@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="0.42" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="XRangePingPong" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="XRangePingPong">
+				<Option output=".\build\XRangePingPong.elf" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Device>
+					<Add option="$device=cortex-m3" />
+					<Add option="$lscript=XRange_mbed_src/targets/cmsis/TARGET_STM/TARGET_STM32L1/TARGET_NUCLEO_L152RE/TOOLCHAIN_GCC_ARM/STM32L152XC.ld" />
+				</Device>
+				<Compiler>
+					<Add option="-fno-exceptions" />
+					<Add option="-std=gnu99" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g" />
+					<Add option="-Wno-unused-parameter" />
+					<Add option="-Wno-missing-field-initializers" />
+					<Add option="-fmessage-length=0" />
+					<Add option="-fno-builtin" />
+					<Add option="-fno-delete-null-pointer-checks" />
+					<Add symbol="TARGET_FF_ARDUINO" />
+					<Add symbol="TOOLCHAIN_GCC_ARM" />
+					<Add symbol="TOOLCHAIN_GCC" />
+					<Add symbol="MBED_BUILD_TIMESTAMP=1465498556.12" />
+					<Add symbol="TARGET_FF_MORPHO" />
+					<Add symbol="TARGET_LIKE_CORTEX_M3" />
+					<Add symbol="TARGET_CORTEX_M" />
+					<Add symbol="TARGET_LIKE_MBED" />
+					<Add symbol="ARM_MATH_CM3" />
+					<Add symbol="TARGET_STM32L1" />
+					<Add symbol="TARGET_STM" />
+					<Add symbol="__CORTEX_M3" />
+					<Add symbol="TARGET_NUCLEO_L152RE" />
+					<Add symbol="TARGET_M3" />
+					<Add symbol="TARGET_STM32L152RE" />
+					<Add symbol="__MBED__=1" />
+					<Add directory="." />
+					<Add directory="SX1272Lib" />
+					<Add directory="SX1272Lib\debug" />
+					<Add directory="SX1272Lib\enums" />
+					<Add directory="SX1272Lib\radio" />
+					<Add directory="SX1272Lib\registers" />
+					<Add directory="SX1272Lib\sx1272" />
+					<Add directory="SX1272Lib\typedefs" />
+					<Add directory="XRange_mbed_src" />
+					<Add directory="XRange_mbed_src\api" />
+					<Add directory="XRange_mbed_src\hal" />
+					<Add directory="XRange_mbed_src\targets" />
+					<Add directory="XRange_mbed_src\targets\cmsis" />
+					<Add directory="XRange_mbed_src\targets\cmsis\TARGET_STM" />
+					<Add directory="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1" />
+					<Add directory="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE" />
+					<Add directory="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\TOOLCHAIN_GCC_ARM" />
+					<Add directory="XRange_mbed_src\targets\hal" />
+					<Add directory="XRange_mbed_src\targets\hal\TARGET_STM" />
+					<Add directory="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE" />
+					<Add directory="XRange_mbed_src\common" />
+				</Compiler>
+				<Cpp>
+					<Add option="-fno-exceptions" />
+					<Add option="-fno-rtti" />
+					<Add option="-std=gnu++98" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g" />
+					<Add option="-Wno-unused-parameter" />
+					<Add option="-Wno-missing-field-initializers" />
+					<Add option="-fmessage-length=0" />
+					<Add option="-fno-builtin" />
+					<Add option="-fno-delete-null-pointer-checks" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-eb_lib=n" />
+					<Add option="-lstdc++" />
+					<Add option="-eb_start_files" />
+					<Add option="-Wl,--gc-sections" />
+					<Add library="supc++" />
+					<Add library="m" />
+					<Add library="c" />
+					<Add library="gcc" />
+					<Add library="nosys" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="main.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.h" />
+		<Unit filename="SX1272Lib\debug\debug.h" />
+		<Unit filename="SX1272Lib\enums\enums.h" />
+		<Unit filename="SX1272Lib\radio\radio.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SX1272Lib\radio\radio.h" />
+		<Unit filename="SX1272Lib\registers\sx1272Regs-Fsk.h" />
+		<Unit filename="SX1272Lib\registers\sx1272Regs-LoRa.h" />
+		<Unit filename="SX1272Lib\sx1272\sx1272-hal.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SX1272Lib\sx1272\sx1272-hal.h" />
+		<Unit filename="SX1272Lib\sx1272\sx1272.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SX1272Lib\sx1272\sx1272.h" />
+		<Unit filename="SX1272Lib\typedefs\typedefs.h" />
+		<Unit filename="XRange_mbed_src\api\AnalogIn.h" />
+		<Unit filename="XRange_mbed_src\api\AnalogOut.h" />
+		<Unit filename="XRange_mbed_src\api\BusIn.h" />
+		<Unit filename="XRange_mbed_src\api\BusInOut.h" />
+		<Unit filename="XRange_mbed_src\api\BusOut.h" />
+		<Unit filename="XRange_mbed_src\api\CallChain.h" />
+		<Unit filename="XRange_mbed_src\api\CAN.h" />
+		<Unit filename="XRange_mbed_src\api\can_helper.h" />
+		<Unit filename="XRange_mbed_src\api\DigitalIn.h" />
+		<Unit filename="XRange_mbed_src\api\DigitalInOut.h" />
+		<Unit filename="XRange_mbed_src\api\DigitalOut.h" />
+		<Unit filename="XRange_mbed_src\api\DirHandle.h" />
+		<Unit filename="XRange_mbed_src\api\Ethernet.h" />
+		<Unit filename="XRange_mbed_src\api\FileBase.h" />
+		<Unit filename="XRange_mbed_src\api\FileHandle.h" />
+		<Unit filename="XRange_mbed_src\api\FileLike.h" />
+		<Unit filename="XRange_mbed_src\api\FilePath.h" />
+		<Unit filename="XRange_mbed_src\api\FileSystemLike.h" />
+		<Unit filename="XRange_mbed_src\api\FunctionPointer.h" />
+		<Unit filename="XRange_mbed_src\api\I2C.h" />
+		<Unit filename="XRange_mbed_src\api\I2CSlave.h" />
+		<Unit filename="XRange_mbed_src\api\InterruptIn.h" />
+		<Unit filename="XRange_mbed_src\api\InterruptManager.h" />
+		<Unit filename="XRange_mbed_src\api\LocalFileSystem.h" />
+		<Unit filename="XRange_mbed_src\api\mbed.h" />
+		<Unit filename="XRange_mbed_src\api\mbed_assert.h" />
+		<Unit filename="XRange_mbed_src\api\mbed_debug.h" />
+		<Unit filename="XRange_mbed_src\api\mbed_error.h" />
+		<Unit filename="XRange_mbed_src\api\mbed_interface.h" />
+		<Unit filename="XRange_mbed_src\api\platform.h" />
+		<Unit filename="XRange_mbed_src\api\PortIn.h" />
+		<Unit filename="XRange_mbed_src\api\PortInOut.h" />
+		<Unit filename="XRange_mbed_src\api\PortOut.h" />
+		<Unit filename="XRange_mbed_src\api\PwmOut.h" />
+		<Unit filename="XRange_mbed_src\api\RawSerial.h" />
+		<Unit filename="XRange_mbed_src\api\rtc_time.h" />
+		<Unit filename="XRange_mbed_src\api\semihost_api.h" />
+		<Unit filename="XRange_mbed_src\api\Serial.h" />
+		<Unit filename="XRange_mbed_src\api\SerialBase.h" />
+		<Unit filename="XRange_mbed_src\api\SPI.h" />
+		<Unit filename="XRange_mbed_src\api\SPISlave.h" />
+		<Unit filename="XRange_mbed_src\api\Stream.h" />
+		<Unit filename="XRange_mbed_src\api\Ticker.h" />
+		<Unit filename="XRange_mbed_src\api\Timeout.h" />
+		<Unit filename="XRange_mbed_src\api\Timer.h" />
+		<Unit filename="XRange_mbed_src\api\TimerEvent.h" />
+		<Unit filename="XRange_mbed_src\api\toolchain.h" />
+		<Unit filename="XRange_mbed_src\api\wait_api.h" />
+		<Unit filename="XRange_mbed_src\common\assert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\board.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\BusIn.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\BusInOut.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\BusOut.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\CallChain.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\CAN.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\Ethernet.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\exit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\FileBase.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\FileLike.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\FilePath.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\FileSystemLike.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\FunctionPointer.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\I2C.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\I2CSlave.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\InterruptIn.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\InterruptManager.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\LocalFileSystem.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\mbed_interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\pinmap_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\RawSerial.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\rtc_time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\semihost_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\Serial.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\SerialBase.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\SPI.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\SPISlave.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\Stream.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\Ticker.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\Timeout.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\Timer.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\TimerEvent.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\us_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\common\wait_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\hal\analogin_api.h" />
+		<Unit filename="XRange_mbed_src\hal\analogout_api.h" />
+		<Unit filename="XRange_mbed_src\hal\can_api.h" />
+		<Unit filename="XRange_mbed_src\hal\ethernet_api.h" />
+		<Unit filename="XRange_mbed_src\hal\gpio_api.h" />
+		<Unit filename="XRange_mbed_src\hal\gpio_irq_api.h" />
+		<Unit filename="XRange_mbed_src\hal\i2c_api.h" />
+		<Unit filename="XRange_mbed_src\hal\pinmap.h" />
+		<Unit filename="XRange_mbed_src\hal\port_api.h" />
+		<Unit filename="XRange_mbed_src\hal\pwmout_api.h" />
+		<Unit filename="XRange_mbed_src\hal\rtc_api.h" />
+		<Unit filename="XRange_mbed_src\hal\serial_api.h" />
+		<Unit filename="XRange_mbed_src\hal\sleep_api.h" />
+		<Unit filename="XRange_mbed_src\hal\spi_api.h" />
+		<Unit filename="XRange_mbed_src\hal\us_ticker_api.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_ca9.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_ca_mmu.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_caFunc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_caInstr.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cm0.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cm0plus.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cm3.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cm4.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cm4_simd.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cmFunc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\core_cmInstr.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_adc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_adc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_adc_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_comp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_comp.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_comp_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_conf.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_cortex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_cortex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_crc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_cryp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_cryp.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_cryp_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_cryp_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dac.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dac_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dac_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_def.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dma.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_dma_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_flash.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_flash_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_flash_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_flash_ramfunc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_flash_ramfunc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_gpio.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_gpio_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_i2c.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_i2s.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_i2s.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_irda.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_irda.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_iwdg.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_lcd.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_nor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_nor.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_opamp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_opamp.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_opamp_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_opamp_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pcd.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pcd_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pcd_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pwr.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pwr_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_pwr_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rcc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rcc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rcc_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rtc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rtc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_rtc_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_sd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_sd.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_smartcard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_smartcard.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_spi.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_spi_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_spi_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_sram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_sram.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_tim.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_tim_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_tim_ex.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_uart.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_usart.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_hal_wwdg.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_ll_fsmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_ll_fsmc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_ll_sdmmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\stm32l1xx_ll_sdmmc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\cmsis.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\cmsis_nvic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\cmsis_nvic.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\hal_tick.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\hal_tick.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\stm32l152xc.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\stm32l152xe.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\stm32l1xx.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\system_stm32l1xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\system_stm32l1xx.h" />
+		<Unit filename="XRange_mbed_src\targets\cmsis\TARGET_STM\TARGET_STM32L1\TARGET_NUCLEO_L152RE\TOOLCHAIN_GCC_ARM\startup_stm32l152xc.s">
+			<Option compilerVar="ASM" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\analogin_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\analogout_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\device.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\gpio_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\gpio_irq_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\gpio_object.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\i2c_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\mbed_overrides.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\objects.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\PeripheralNames.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\PeripheralPins.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\PeripheralPins.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\pinmap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\PinNames.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\port_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\PortNames.h" />
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\pwmout_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\rtc_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\serial_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\sleep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\spi_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="XRange_mbed_src\targets\hal\TARGET_STM\TARGET_NUCLEO_L152RE\us_ticker.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="XRangePingPong" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>
